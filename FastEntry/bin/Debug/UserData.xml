@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserData>
+  <add sitename="163" url="http://email.163.com/" usernameinputid="userNameIpt" passwordinputid="password" koulininputid="" yzminputid="" submitid="btnSubmit" submitclass="btn btn-login" submiteletype="" username="" password="" koulin="" yzm="" />
+  <add sitename="博客园" url="https://passport.cnblogs.com/user/signin" submitid="signin" submitclass="button" username="" password="" koulin="" yzm="" usernameinputid="input1" passwordinputid="input2" koulininputid="" yzminputid="" />
+  <add sitename="CSDN" url="https://passport.csdn.net/account/login" submitid="" submitclass="logging" username="" password="" koulin="" yzm="" usernameinputid="username" passwordinputid="password" koulininputid="" yzminputid="" />
+</UserData>
