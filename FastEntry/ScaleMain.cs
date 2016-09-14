@@ -1,13 +1,6 @@
-﻿using FastEntry.Action;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using EPL;
 
 namespace FastEntry
 {
@@ -20,7 +13,7 @@ namespace FastEntry
 
         private void ScaleMain_Load(object sender, EventArgs e)
         {
-            Open("Main");
+            Open("CollectionList");
         }
 
         public void Open(string window, params object[] arg)
@@ -35,30 +28,52 @@ namespace FastEntry
             form.Show();
             this.panel1.Update();
         }
-
-        private void 新建ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Open("NewSite");
-        }
-
-        private void 网站登录ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Open("Main");
-        }
-
+        
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Search_Click(object sender, EventArgs e)
         {
             string url = "https://www.baidu.com";
             string inputid = "kw";
             string content = BDText.Text.Trim();
             string submitid = "su";
-            BaiduSearch baidu = new BaiduSearch();
+            IBaiduSearch baidu = new IEBaiduSearch();
             baidu.Search(url, inputid, content, submitid);
         }
+
+        private void 收藏站ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Open("NewCollection");
+        }
+
+        private void 登录站ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Open("NewSite");
+        }
+
+        private void NewCollectionSiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Open("NewCollection");
+        }
+
+        private void NewLoginSiteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Open("NewSite");
+        }
+
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Open("CollectionList");
+        }
+
+        private void 打开ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Open("LoginSiteList");
+        }
+
+
     }
 }

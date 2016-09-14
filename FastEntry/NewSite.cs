@@ -1,17 +1,9 @@
-﻿using FastEntry.Helper;
-using FastEntry.Model;
+﻿using Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
+using UDP;
 
 namespace FastEntry
 {
@@ -54,19 +46,22 @@ namespace FastEntry
                 }
             }
             bool issuccess=false;
-            if (UserDataHelper.IsExsitedSiteName(entity.SITENAME))
+            LoginDataEntry loginentry = (LoginDataEntry)EntryFactory.Create(DataType.Login);
+            dynamic condition = new System.Dynamic.ExpandoObject();
+            condition.sitename = entity.SITENAME;
+            if (loginentry.GetEntity(condition) != null)
             {
-                issuccess = UserDataHelper.UpdateALine(entity);
+                issuccess = loginentry.UpdateEntity(entity);
             }
             else
             {
-                issuccess = UserDataHelper.WriteALine(entity);
+                issuccess = loginentry.InsertEntity(entity);
             }
             if (issuccess)
             {
                 MessageBox.Show("保存成功");
                 ScaleMain parent = (ScaleMain)this.Parent.Parent;
-                parent.Open("Main");
+                parent.Open("LoginSiteList");
                 this.Close();
             }
             else

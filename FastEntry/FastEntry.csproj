@@ -60,9 +60,6 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -78,26 +75,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\AbstractLogin.cs" />
-    <Compile Include="Abstract\AbstractPageTool.cs" />
-    <Compile Include="Action\BaiduSearch.cs" />
-    <Compile Include="Action\CommonLogin.cs" />
-    <Compile Include="Helper\UserDataHelper.cs" />
-    <Compile Include="LoginEngity.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="CollectionList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="CollectionList.Designer.cs">
+      <DependentUpon>CollectionList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\ILogin.cs" />
-    <Compile Include="MiniForm.cs">
+    <Compile Include="LoginSiteList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiniForm.Designer.cs">
-      <DependentUpon>MiniForm.cs</DependentUpon>
+    <Compile Include="LoginSiteList.Designer.cs">
+      <DependentUpon>LoginSiteList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\LoginEntity.cs" />
+    <Compile Include="NewCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCollection.Designer.cs">
+      <DependentUpon>NewCollection.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewSite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +107,14 @@
     <Compile Include="ScaleMain.Designer.cs">
       <DependentUpon>ScaleMain.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="CollectionList.resx">
+      <DependentUpon>CollectionList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiniForm.resx">
-      <DependentUpon>MiniForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginSiteList.resx">
+      <DependentUpon>LoginSiteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCollection.resx">
+      <DependentUpon>NewCollection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSite.resx">
       <DependentUpon>NewSite.cs</DependentUpon>
@@ -134,8 +132,7 @@
       <DependentUpon>ScaleMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FastEntry.vshost.exe.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="FastEntry_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Model.SiteCollectionEntity.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,19 +147,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="SHDocVw">
-      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="bin\Debug\FastEntry.vshost.exe" />
-    <Content Include="bin\Debug\UserData.xml" />
+    <Content Include="bin\Debug\LoginData.xml" />
+    <Content Include="bin\Debug\SiteCollectionData.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
@@ -183,6 +170,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EPL\EPL.csproj">
+      <Project>{cc75c678-08ed-4c0a-85a2-219d3f929250}</Project>
+      <Name>EPL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{dd468dc3-4d23-4147-b31b-d3808759486e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UDP\UDP.csproj">
+      <Project>{51d6d240-d87a-4f6c-b155-3b3e6bf408f1}</Project>
+      <Name>UDP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
