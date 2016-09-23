@@ -44,6 +44,7 @@
     <Compile Include="LoginDataEntry.cs" />
     <Compile Include="EntryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShuaDanDataEntry.cs" />
     <Compile Include="SiteCollectionDataEntry.cs" />
   </ItemGroup>
   <ItemGroup>

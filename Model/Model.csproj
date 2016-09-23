@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="LoginEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShuaDanEntity.cs" />
     <Compile Include="SiteCollectionEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

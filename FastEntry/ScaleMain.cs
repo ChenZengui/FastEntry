@@ -74,6 +74,14 @@ namespace FastEntry
             Open("LoginSiteList");
         }
 
+        private void 新建ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Open("NewShuaDan");
+        }
 
+        private void 打开ToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Open("ShuaDanList");
+        }
     }
 }

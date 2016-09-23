@@ -1,11 +1,11 @@
 ﻿using mshtml;
 using SHDocVw;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace EPL
 {
+    /// <summary>
+    /// 类实现了IE浏览器的百度搜索功能
+    /// </summary>
     public class IEBaiduSearch :AbstractOpenIE, IBaiduSearch
     {
         public void Search(string url, string searchinputid, string content, string submitid)

@@ -1,14 +1,19 @@
-﻿using System;
-using Model;
+﻿using Model;
 using mshtml;
 using SHDocVw;
-using System.Diagnostics;
-using System.Threading;
 
 namespace EPL
 {
+    /// <summary>
+    /// 该类为实现了IE浏览器登录网站的抽象类，该类实现了继承自AbstractOpenIE,实现了接口IExplorerLogin
+    /// </summary>
     public abstract class AbstractLoginIE : AbstractOpenIE, IExplorerLogin
     {
+        #region 该方法实现了打开浏览器并登录，判断了网站是否已经打开
+        /// <summary>
+        /// 该方法实现了打开浏览器并登录，判断了网站是否已经打开
+        /// </summary>
+        /// <param name="model"></param>
         public virtual void Login(LoginEntity model)
         {
             InternetExplorer browser = null;
@@ -75,6 +80,7 @@ namespace EPL
             }
             return;
         }
+        #endregion
 
         #region 该方法用于绑定数据，特殊的绑定需要重写此方法，如绑定验证码
         /// <summary>

@@ -36,14 +36,17 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.制定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NewCollectionSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.登录站ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.NewLoginSiteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BDText = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
-            this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打开ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.刷单站ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新建ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +56,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.菜单ToolStripMenuItem,
             this.制定ToolStripMenuItem,
-            this.登录站ToolStripMenuItem1});
+            this.登录站ToolStripMenuItem1,
+            this.刷单站ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(412, 25);
@@ -111,9 +115,16 @@
             // NewCollectionSiteToolStripMenuItem
             // 
             this.NewCollectionSiteToolStripMenuItem.Name = "NewCollectionSiteToolStripMenuItem";
-            this.NewCollectionSiteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.NewCollectionSiteToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.NewCollectionSiteToolStripMenuItem.Text = "新建";
             this.NewCollectionSiteToolStripMenuItem.Click += new System.EventHandler(this.NewCollectionSiteToolStripMenuItem_Click);
+            // 
+            // 打开ToolStripMenuItem
+            // 
+            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.打开ToolStripMenuItem.Text = "打开";
+            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 登录站ToolStripMenuItem1
             // 
@@ -127,9 +138,16 @@
             // NewLoginSiteToolStripMenuItem1
             // 
             this.NewLoginSiteToolStripMenuItem1.Name = "NewLoginSiteToolStripMenuItem1";
-            this.NewLoginSiteToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.NewLoginSiteToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.NewLoginSiteToolStripMenuItem1.Text = "新建";
             this.NewLoginSiteToolStripMenuItem1.Click += new System.EventHandler(this.NewLoginSiteToolStripMenuItem1_Click);
+            // 
+            // 打开ToolStripMenuItem1
+            // 
+            this.打开ToolStripMenuItem1.Name = "打开ToolStripMenuItem1";
+            this.打开ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.打开ToolStripMenuItem1.Text = "打开";
+            this.打开ToolStripMenuItem1.Click += new System.EventHandler(this.打开ToolStripMenuItem1_Click);
             // 
             // panel1
             // 
@@ -167,19 +185,28 @@
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // 打开ToolStripMenuItem
+            // 刷单站ToolStripMenuItem
             // 
-            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.打开ToolStripMenuItem.Text = "打开";
-            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
+            this.刷单站ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.新建ToolStripMenuItem1,
+            this.打开ToolStripMenuItem2});
+            this.刷单站ToolStripMenuItem.Name = "刷单站ToolStripMenuItem";
+            this.刷单站ToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
+            this.刷单站ToolStripMenuItem.Text = "刷单站";
             // 
-            // 打开ToolStripMenuItem1
+            // 新建ToolStripMenuItem1
             // 
-            this.打开ToolStripMenuItem1.Name = "打开ToolStripMenuItem1";
-            this.打开ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.打开ToolStripMenuItem1.Text = "打开";
-            this.打开ToolStripMenuItem1.Click += new System.EventHandler(this.打开ToolStripMenuItem1_Click);
+            this.新建ToolStripMenuItem1.Name = "新建ToolStripMenuItem1";
+            this.新建ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.新建ToolStripMenuItem1.Text = "新建";
+            this.新建ToolStripMenuItem1.Click += new System.EventHandler(this.新建ToolStripMenuItem1_Click);
+            // 
+            // 打开ToolStripMenuItem2
+            // 
+            this.打开ToolStripMenuItem2.Name = "打开ToolStripMenuItem2";
+            this.打开ToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.打开ToolStripMenuItem2.Text = "打开";
+            this.打开ToolStripMenuItem2.Click += new System.EventHandler(this.打开ToolStripMenuItem2_Click);
             // 
             // ScaleMain
             // 
@@ -228,6 +255,9 @@
         private System.Windows.Forms.ToolStripMenuItem NewLoginSiteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 刷单站ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 新建ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem2;
 
     }
 }

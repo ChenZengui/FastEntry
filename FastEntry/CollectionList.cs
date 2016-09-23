@@ -1,13 +1,8 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Dynamic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UDP;
 using EPL;
@@ -17,6 +12,7 @@ namespace FastEntry
 {
     public partial class CollectionList : Form
     {
+        public delegate void InvokMinilizeForm();
         public CollectionList()
         {
             InitializeComponent();
@@ -77,11 +73,12 @@ namespace FastEntry
         }
 
         private void OpenALink(SiteCollectionEntity entity)
-        {
+        {            
             if (entity == null)
             {
                 return;
             }
+
             //增加点击量
             entity.CLICKCOUNT = (Int32.Parse(entity.CLICKCOUNT) + 1).ToString();
             SiteCollectionDataEntry entry = (SiteCollectionDataEntry)EntryFactory.Create(DataType.SiteCollection);
@@ -89,7 +86,13 @@ namespace FastEntry
             condition.sitename = entity.SITENAME;
             entry.UpdateEntity(entity);
 
+            Invoke(new InvokMinilizeForm(delegate()
+            {
+                this.ParentForm.WindowState = FormWindowState.Minimized;
+            }));
+
             IExplorerOpen open = new CommSiteOpenIEHelper();
+            
             open.OpenLink(entity.URL);
         }
     }

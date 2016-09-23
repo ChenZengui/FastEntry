@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\EPL.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,17 +37,21 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractLoginIE.cs" />
     <Compile Include="AbstractOpenIE.cs" />
+    <Compile Include="AbstractShuaDanIE.cs" />
+    <Compile Include="CommSiteShuaDanIEHelper.cs" />
     <Compile Include="IEBaiduSearch.cs" />
     <Compile Include="CommSiteLoginIEHelper.cs" />
     <Compile Include="CommSiteOpenIEHelper.cs" />
     <Compile Include="IBaiduSearch.cs" />
     <Compile Include="IExplorerOpen.cs" />
     <Compile Include="IExplorerLogin.cs" />
+    <Compile Include="IExplorerShuaDan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteCollection.cs" />
   </ItemGroup>

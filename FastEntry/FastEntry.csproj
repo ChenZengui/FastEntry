@@ -93,6 +93,12 @@
     <Compile Include="NewCollection.Designer.cs">
       <DependentUpon>NewCollection.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewShuaDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewShuaDan.Designer.cs">
+      <DependentUpon>NewShuaDan.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewSite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     <Compile Include="ScaleMain.Designer.cs">
       <DependentUpon>ScaleMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShuaDanList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShuaDanList.Designer.cs">
+      <DependentUpon>ShuaDanList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CollectionList.resx">
       <DependentUpon>CollectionList.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewCollection.resx">
       <DependentUpon>NewCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewShuaDan.resx">
+      <DependentUpon>NewShuaDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSite.resx">
       <DependentUpon>NewSite.cs</DependentUpon>
@@ -130,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="ScaleMain.resx">
       <DependentUpon>ScaleMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShuaDanList.resx">
+      <DependentUpon>ShuaDanList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\FastEntry.vshost.exe.config" />
     <None Include="Properties\DataSources\Model.SiteCollectionEntity.datasource" />
@@ -149,6 +167,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\FastEntry.vshost.exe" />
     <Content Include="bin\Debug\LoginData.xml" />
+    <Content Include="bin\Debug\ShuaDanData.xml" />
     <Content Include="bin\Debug\SiteCollectionData.xml" />
   </ItemGroup>
   <ItemGroup>
